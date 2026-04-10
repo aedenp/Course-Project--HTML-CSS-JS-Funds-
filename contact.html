@@ -3,55 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Contact</title>
+    <title>Aeden Colynuck-Walsh - Contact</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
+        <nav class="navbar">
+            <div class="logo">ACW</div>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
+            <button id="darkModeToggle" class="dark-mode-btn" aria-label="Toggle dark mode">🌙 Dark Mode</button>
         </nav>
     </header>
 
     <main>
-        <!-- Contact Section with Form -->
-        <section id="contact" class="contact-section">
+        <section class="contact-section">
             <h1>Contact Me</h1>
-            <p>Interested in working together? Send me a message!</p>
+            <p>Interested in working together, collaborating on a project, or just saying hello? Send me a message!</p>
             
-            <!-- Form with HTML validation attributes -->
-            <form action="#" method="POST" class="contact-form">
+            <form id="contactForm" class="contact-form" action="#" method="POST">
                 <div class="form-group">
-                    <label for="name">Name:</label>
+                    <label for="name">Name *</label>
                     <input type="text" id="name" name="name" required minlength="2" placeholder="Your full name">
                 </div>
-                
                 <div class="form-group">
-                    <label for="email">Email:</label>
+                    <label for="email">Email *</label>
                     <input type="email" id="email" name="email" required placeholder="your.email@example.com">
                 </div>
-                
                 <div class="form-group">
-                    <label for="subject">Subject:</label>
+                    <label for="subject">Subject *</label>
                     <input type="text" id="subject" name="subject" required minlength="3" placeholder="What's this about?">
                 </div>
-                
                 <div class="form-group">
-                    <label for="message">Message:</label>
+                    <label for="message">Message *</label>
                     <textarea id="message" name="message" required minlength="10" rows="5" placeholder="Your message here..."></textarea>
                 </div>
-                
                 <button type="submit" class="submit-btn">Send Message</button>
+                <div id="formFeedback" class="form-feedback"></div>
             </form>
+
+            <div class="contact-info">
+                <p>📧 aedenphoenix@gmail.com</p>
+                <p>📞 (705) 987-5369</p>
+                <p>📍 Ontario, Canada</p>
+                <p>💼 Open to internships & junior developer roles</p>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <div class="footer-content">
+            <p>&copy; 2025 Aeden P. Colynuck-Walsh. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>

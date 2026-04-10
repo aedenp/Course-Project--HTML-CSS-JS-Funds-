@@ -3,50 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Projects</title>
+    <title>Aeden Colynuck-Walsh - Projects</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
+        <nav class="navbar">
+            <div class="logo">ACW</div>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <button id="darkModeToggle" class="dark-mode-btn" aria-label="Toggle dark mode">🌙 Dark Mode</button>
         </nav>
     </header>
 
     <main>
-        <!-- Projects Section -->
-        <section id="projects" class="projects-section">
+        <section class="projects-section">
             <h1>My Projects</h1>
-            
-            <!-- Project 1 -->
-            <article class="project-card">
-                <h2>Project Name 1</h2>
-                <p>Description of your first project. What technologies did you use? What problem does it solve?</p>
-                <a href="https://github.com/yourusername/project1" target="_blank" class="project-link">View on GitHub</a>
-            </article>
-            
-            <!-- Project 2 -->
-            <article class="project-card">
-                <h2>Project Name 2</h2>
-                <p>Description of your second project. What did you learn from building this?</p>
-                <a href="https://github.com/yourusername/project2" target="_blank" class="project-link">View on GitHub</a>
-            </article>
-            
-            <!-- Project 3 -->
-            <article class="project-card">
-                <h2>Project Name 3</h2>
-                <p>Description of your third project. What makes this project special?</p>
-                <a href="https://github.com/yourusername/project3" target="_blank" class="project-link">View on GitHub</a>
-            </article>
+            <div class="projects-grid">
+                <!-- Project 1: Real Food Plann -->
+                <article class="project-card">
+                    <h2>🍽️ Real Food Plann</h2>
+                    <p>A meal planning and recipe organization tool to help users track ingredients, plan weekly meals, and reduce food waste. Built with HTML, CSS, and JavaScript.</p>
+                    <p class="tech-stack">Tech: HTML, CSS, JavaScript, LocalStorage</p>
+                    <a href="https://github.com/aedenp/Real-Food-Plann" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub →</a>
+                    <button class="details-btn" data-project="proj1">Show Details</button>
+                    <div id="proj1-details" class="project-details hidden">
+                        <p>🔍 <strong>More about this project:</strong> Real Food Plann is a site that I have been developing outside of school for personal use, it is something that I find a use for being indecisive about what I eat, so it helps pick for me, and all the other services like this over complicate it or make you pay to use it so I made one myself. Future plans involve a calorie tracker, recipe suggestion, grocery list export and so much more.</p>
+                    </div>
+                </article>
+
+                <!-- Project 2: Arduino Blackjack Game -->
+                <article class="project-card">
+                    <h2>🃏 Arduino Blackjack Game</h2>
+                    <p>A fully functional Blackjack game built on an Arduino Uno with an LCD display, push buttons, and LEDs. Simulated in Tinkercad.</p>
+                    <p class="tech-stack">Tech: C++ (Arduino), Electronics, Tinkercad Simulation</p>
+                    <a href="https://www.tinkercad.com/things/0Y183a98u71-blackjack-lcd-test" target="_blank" rel="noopener noreferrer" class="project-link">View on Tinkercad →</a>
+                    <button class="details-btn" data-project="proj2">Show Details</button>
+                    <div id="proj2-details" class="project-details hidden">
+                        <p>🔍 <strong>More about this project:</strong>A basic game of blackjack that I have coded as my final project for my Arduino class. I designed this device to simulate a real life style game of blackjack, with functional bank system with betting , hit/stand system, split/double down function, and more all appearing on a 2x16 lcd with custom card/symbol designs.</p>
+                    </div>
+                </article>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <div class="footer-content">
+            <p>&copy; 2025 Aeden P. Colynuck-Walsh. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>

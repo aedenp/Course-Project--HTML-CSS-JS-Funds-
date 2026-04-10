@@ -2,52 +2,87 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Portfolio of Aeden P. Colynuck-Walsh - Computer Programming Student at Georgian College">
+    <title>Aeden Colynuck-Walsh | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
+        <nav class="navbar">
+            <div class="logo">ACW</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <button id="darkModeToggle" class="dark-mode-btn" aria-label="Toggle dark mode">🌙 Dark Mode</button>
         </nav>
     </header>
 
     <main>
-        <!-- About You Section -->
         <section id="about" class="about-section">
             <h1>About Me</h1>
-            <div class="about-content">
-                <!-- Image of you or something else -->
-                <img src="images/profile.jpg" alt="Your Name - Profile Picture" class="profile-img">
-                
-                <!-- Paragraph about you -->
-                <div class="bio">
-                    <p>Hello! I'm [Your Name], a [your program/field] student at [school]. I'm passionate about [your interests] and love creating [what you create]. This portfolio showcases my journey and projects as I develop my skills in [your field].</p>
+            <div class="about-grid">
+                <div class="profile-image-wrapper">
+                    <!-- Your profile image -->
+                    <img src="images/DSC03080.JPG" alt="Aeden Colynuck-Walsh - profile" class="profile-img">
                 </div>
-                
-                <!-- List of skills -->
-                <div class="skills">
-                    <h2>My Skills</h2>
-                    <ul>
-                        <li>HTML5</li>
-                        <li>CSS3</li>
-                        <li>JavaScript</li>
-                        <li>Responsive Design</li>
-                        <li>Version Control (Git)</li>
-                        <!-- Add more skills -->
-                    </ul>
+                <div class="bio-skills">
+                    <div class="bio">
+                        <p>Hey there, welcome to my humble portfolio website, my name is Aeden P. Colynuck, I am a computer programming and analysis student in my first semester. I have previously graduated sports administration (graduated a deans list student), where I decided I was not done with school. I bring a strong thirst to problem solving and love getting into the gritty overtime sessions where you lose track of time.</p>
+                        <br>
+                        <p>I'm a bilingual French/English speaker, with previous tech experience having always grown up around it, or previous jobs like in the audio distribution industry, I believe I bring a certain edge that is hard to find in 2026.</p>
+                        <br>
+                        <p><strong><small>p.s. I also really enjoy photography as it is one of my favorite things, all photos featured on the site were taken by me.</small></strong></p>
+                    </div>
+                    <div class="skills">
+                        <h2>My Skills</h2>
+                        <ul class="skills-list">
+                            <li>HTML5 & CSS3</li>
+                            <li>JavaScript (learning)</li>
+                            <li>Problem Solving</li>
+                            <li>Data Analysis</li>
+                            <li>Bilingual (English/French)</li>
+                            <li>Adaptability & Teamwork</li>
+                            <li>Inventory Management</li>
+                            <li>Customer Service</li>
+                        </ul>
+                    </div>
                 </div>
+            </div>
+
+            <!-- JavaScript Interactivity #1: Personalized greeting -->
+            <div class="greeting-card">
+                <h3>🤝 Let's Personalize Your Experience</h3>
+                <div class="greeting-form">
+                    <label for="visitorName">What's your name?</label>
+                    <input type="text" id="visitorName" placeholder="e.g., Jamie">
+                    <button id="greetBtn" class="interactive-btn">Greet Me</button>
+                </div>
+                <p id="greetingMessage" class="greeting-message"></p>
+            </div>
+        </section>
+
+        <!-- Reflection Section (required) -->
+        <section id="reflection" class="reflection-section">
+            <h2>📌 Project Reflection</h2>
+            <div class="reflection-content">
+                <p><strong>What went well:</strong> Using a mobile-first approach with CSS Grid and Flexbox made the layout naturally responsive. The dark mode toggle with localStorage works seamlessly across all pages. Implementing JavaScript interactions (dark mode + personalized greeting + form validation + project details toggle) enhanced user engagement.</p>
+                <br>
+                <p><strong>Challenges faced:</strong>Something that gave me trouble with this project was the doing the images, with it being something I am not very good at and have kind of avoided since the beginning of the semester. So i decided to challenge myself a little bit with the background making my day/night theme have an actual day/night cycle with photos from my one vault. This taught me a new skill and showed me that it is not difficult to add images anymore.</p>
+                <br>
+                <p><strong>What I learned:</strong>I learned what it taked to create a functioning site, and that it is not always as simple as some people think it is, from coming up with the ideas on what to do, to coming up with how to implement them. I really enjoyed this project and look forward to the more to come in future semesters.</p>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <div class="footer-content">
+            <p>&copy; 2026 Aeden P. Colynuck-Walsh. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
